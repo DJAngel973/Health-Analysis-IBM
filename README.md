@@ -61,13 +61,20 @@ This approach ensures the project maintains security best practices from the sta
 ## Project Structure
 
 ```
-CensoSalud/
+healthAnalysis/
 ├── README.md
 ├── .gitignore
-├── index.html          # Main page with form
-├── script.js           # Application logic
-├── style.css           # Interface styles
-└── assets/             # Additional resources (images, etc.)
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── public/
+│   ├── index.html            # Main page with form
+│   ├── health_contact.html   # Contact page
+│   └── health_analysis.json  # Health conditions data
+├── scripts/
+│   └── health_analysis.js    # Application logic
+├── styles/                   # CSS stylesheets directory
+└── assets/                   # Additional resources (images, etc.)
 ```
 
 ## Installation and Usage
@@ -82,6 +89,7 @@ CensoSalud/
 - HTML5
 - CSS3
 - JavaScript
+- JSON (for health data storage)
 - DOM Manipulation
 
 ## Contributions
