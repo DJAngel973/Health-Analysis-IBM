@@ -1,7 +1,7 @@
 const addPatientButton = document.getElementById("addPatient");
 const report = document.getElementById("report");
 const btnSearch = document.getElementById('btnSearch');
-const  patients = [];
+const patients = [];
 
 function addPatient() {
     const name = document.getElementById("name").value;
@@ -10,7 +10,7 @@ function addPatient() {
     const condition = document.getElementById("condition").value;
 
     if (name && gender && age && condition) {
-        patients.push({name, gender: gender.value, age, condition });
+        patients.push({ name, gender: gender.value, age, condition });
         resetForm();
         generateReport();
     }
@@ -42,18 +42,15 @@ function generateReport() {
             "High Blood Pressure": 0,
         },
     };
-
     for (const patient of patients) {
         conditionsCount[patient.condition]++;
         genderConditionsCount[patient.gender][patient.condition]++;
     }
-
     report.innerHTML = `Number of patients: ${numPatients}<br><br>`;
     report.innerHTML += `Conditions Breakdown:<br>`;
     for (const condition in conditionsCount) {
         report.innerHTML += `${condition}: ${conditionsCount[condition]}<br>`;
     }
-
     report.innerHTML += `<br>Gender-Based Conditions:<br>`;
     for (const gender in genderConditionsCount) {
         report.innerHTML += `${gender}:<br>`;
@@ -62,5 +59,4 @@ function generateReport() {
         }
     }
 }
-
-addPatientButton.addEventListener("click",  addPatient);
+addPatientButton.addEventListener("click", addPatient);
