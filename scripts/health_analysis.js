@@ -27,19 +27,19 @@ function generateReport() {
     const numPatients = patients.length;
     const conditionsCount = {
         Diabetes: 0,
-        Thyroid: 0,
-        "High Blood Pressure": 0,
+        Tiroides: 0,
+        "Presión Arterial Alta": 0,
     };
     const genderConditionsCount = {
         Male: {
             Diabetes: 0,
-            Thyroid: 0,
-            "High Blood Pressure": 0,
+            Tiroides: 0,
+            "Presión Arterial Alta": 0,
         },
         Female: {
             Diabetes: 0,
-            Thyroid: 0,
-            "High Blood Pressure": 0,
+            Tiroides: 0,
+            "Presión Arterial Alta": 0,
         },
     };
     for (const patient of patients) {
