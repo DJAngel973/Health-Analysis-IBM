@@ -15,7 +15,7 @@ const patients = [];
  * @description Recolecta datos del formulario, valida la información y agrega un nuevo paciente al array
  * @returns {void}
  * @throws {Error} Si los campos requeridos están vacíos
- * 
+ *
  * @example
  * // Ejemplo de uso interno cuando el usuario completa el formulario
  * addPatient(); // Agrega paciente con datos del formulario

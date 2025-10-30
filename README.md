@@ -70,10 +70,9 @@ healthAnalysis/
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
 ├── LICENSE
-├── public/
-│   ├── index.html              # Main page with patient form and search
-│   ├── health_contact.html     # Contact page with inquiry form
-│   └── health_analysis.json    # Health conditions database
+├── index.html              # Main page with patient form and search
+├── health_contact.html     # Contact page with inquiry form
+├── health_analysis.json    # Health conditions database
 ├── scripts/
 │   └── health_analysis.js      # Main application logic with JSDoc
 ├── styles/
@@ -88,11 +87,11 @@ healthAnalysis/
 ## Installation and Usage
 
 1. Clone the repository
-2. Open [`public/index.html`](public/index.html) in your web browser
+2. Open `index.html` in your web browser
 3. Fill out the patient form with the required data
 4. Use the search functionality to look up health conditions
 5. Generate reports to view patient statistics
-6. Access the contact page through [`public/health_contact.html`](public/health_contact.html)
+6. Access the contact page through `health_contact.html`
 
 ## Technologies Used
 
