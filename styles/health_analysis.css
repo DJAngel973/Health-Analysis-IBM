@@ -1,92 +1,140 @@
 /* Basic CSS for the navigation bar */
 
+/*
+1. RESET AND BASE STYLES
+*/
+
+/* Universal reset to remove default margis and paddings */
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Include padding and border in total width */
 }
+
+/*
+2. NAVIGATION BAR STYLES
+Purpose: Styles for the main navigation bar
+Components: Logo, navigation links, search field
+*/
+
+/* Main navigation container */
 nav {
-    background-color: #f0f0f0;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 20px;               /* Internal spacing */
+    display: flex;               /* Flexbox layout */
+    align-items: center;         /* Vertical center alignment */
+    justify-content: space-between; /* Horizontal distribution */
     
 }
 
+/* Navigation list */
 nav ul {
-    list-style-type: none;
-    /* padding: 0; */
+    list-style-type: none; /* Remove list bullets */
+    /* padding: 0; - Already set in universal reset */
 }
 
+/* Inline list elements */
 nav ul li {
-    display: inline;
-    margin-right: 10px;
+    display: inline;     /* Horizontal elements */
+    margin-right: 10px;  /* Spacing between elements */
 }
 
+/* Navigation links */
 nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
+    text-decoration: none;  /* No underline */
+    color: #333;          /* Dark gray text color */
+    font-weight: bold;      /* Bold text */
 }
 
-/* Basic CSS for the form elements */
+/*
+3. TYPOGRAPHY
+*/
+
+/* Base body styles */
 body {
     font-family: Arial, sans-serif;
-    /* margin: 20px; */
+    /* margin: 20px; - Commented for no-margin layout */
 }
 
+/* Main headings */
 h1 {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Bottom spacing */
 }
 
+/* Secondary headings */
+h2 {
+    margin-top: 30px; /* Top spacing for separation */
+}
+
+/*
+4. FORM ELEMENTS
+Purpose: Styles for data input forms
+Components: Labels, inputs, selects, buttons
+*/
+
+/* Form field containers */
 div {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Spacing between fields */
 }
 
+/* Form labels */
 label {
-    display: inline-block;
-    width: 100px;
+    display: inline-block; /* Allows setting width */
+    width: 100px;          /* Fixed width for alignment */
 }
 
+/* Text and number inputs, and selectors */
 input[type="text"],
 input[type="number"],
 select {
-    width: 200px;
-    padding: 5px;
+    width: 200px; /* Standard width */
+    padding: 5px; /* Internal padding */
 }
 
+/*
+5. BUTTONS
+Purpose: Styles for interactive buttons
+States: Normal, hover
+*/
+
+/* Base button styles */
 button {
-    padding: 7px 15px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
+    padding: 7px 15px;           /* Vertical and horizontal internal padding */
+    background-color: #4CAF50; /* Primary green */
+    color: white;              /* White text */
+    border: none;                /* No border */
+    cursor: pointer;             /* Hand cursor on hover */
 }
 
+/* Button hover state */
 button:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Darker green on hover */
 }
 
-/* Basic CSS for the report section */
-h2 {
-    margin-top: 30px;
-}
+/*
+6. REPORTS AND RESULTS SECTION
+Purpose: Styles for reports and search results sections
+Components: Report container, results container, images
+*/
 
+/* Report and results containers - Base styles */
 #report,#result {
-    padding: 10px;
-    max-width: 400px;
-    word-wrap: break-word;
+    padding: 10px;         /* Internal padding */
+    max-width: 400px;      /* Maximum width for readability */
+    word-wrap: break-word; /* Break long words */
 }
+/* Specific search results container */
 #result{
-height: 400px;
-width: 500px;
-display: flex;
-align-items: center;
-justify-content: space-around;
-flex-direction: column;
+height: 400px;                 /* Fixed height */
+width: 500px;                  /* Specific width (overrides max-width) */
+display: flex;                 /* Flexbox layout */
+align-items: center;           /* Vertical center alignment */
+justify-content: space-around; /* Spaced distribution */
+flex-direction: column;        /* Vertical direction */
 }
+/* Images within results */
 #result img{
-    width: 200px;
-    height: 100px;
+    width: 200px;  /* Fixed image width */
+    height: 100px; /* Fixed image height */
+    /* Note: This may distort image if aspect ratio is not maintained */
 }

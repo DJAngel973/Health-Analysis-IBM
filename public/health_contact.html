@@ -1,68 +1,149 @@
+<!--
+/**
+ * @page health_contact.html
+ * @title Contact Page - Health Analysis Census
+ * @description Página de contacto para consultas sobre condiciones de salud y tratamientos
+ * @author [Tu Nombre]
+ * @version 1.0
+ * @dependencies
+ *   - /styles/health_analysis.css (Main stylesheet)
+ *   - Inline CSS for contact form styling
+ */
+-->
+
 <!DOCTYPE html>
 <html lang="es">
     <head>
         <meta charset="UTF-8">
         <title>Contáctanos</title>
+        <!-- Main application stylesheet -->
         <link rel="stylesheet" href="/styles/health_analysis.css">
+        <!--
+        /**
+         * @component Contact Form Styles
+         * @description Estilos específicos para el formulario de contacto
+         * @scope Local (inline styles)
+         */
+        -->
         <style>
+            /* Center alignment for entire page content */
             body {
                 text-align: center;
             }
-            /* Estilos basicos para fines demostrativos */
+            /* Contact form container - Contenedor del formulario */
             #contactForm {
-                max-width: 400px;
-                margin: 0 auto;
+                max-width: 400px;   /* Maximum form width for readability */
+                margin: 0 auto;     /* Center the form horizontally */
             }
+            /* Form input fields styling - Estilos de campos de entrada */
             #contactForm input,
             #contactForm textarea {
-                width: 100%;
-                margin-bottom: 15px;
-                padding: 8px;
+                width: 100%;           /* Full width within container */
+                margin-bottom: 15px;   /* Spacing between fields */
+                padding: 8px;          /* Internal padding for better UX */
             }
+            /* Submit button styling - Estilos del botón de envío */
             #contactForm button {
-                padding: 10px 20px;
-                background-color: #007bff;
-                color: white;
-                border: none;
-                cursor: pointer;
+                padding: 10px 20px;           /* Vertical and horizontal padding */
+                background-color: #007bff;  /* Primary blue color */
+                color: white;               /* White text */
+                border: none;                 /* Remove default border */
+                cursor: pointer;              /* Hand cursor on hover */
             }
+            /* Submit button hover state - Estado hover del botón */
             #contactForm button:hover {
-                background-color: #0056b3;
+                background-color: #0056b3;  /* Darker blue on hover */
             }
         </style>
     </head>
     <body>
+        <!--
+        /**
+         * @component Navigation Bar
+         * @description Barra de navegación principal con enlaces a páginas
+         * @elements
+         *   - home: Link to main page (index.html)
+         *   - contact: Link to contact page (current page)
+         * @note Navigation structure matches main page for consistency
+         */
+        -->
         <nav><h1>Censo de Análisis de Salud</h1>
             <ul>
+                <!-- Navigation links - Enlaces de navegación -->
                 <li><a href="/public/index.html" id="home">Inicio</a></li>
                 <li><a href="/public/health_contact.html" id="contact">Contáctenos</a></li>
             </li>
             </ul>
         </nav>
+
+        <!--
+        /**
+         * @component Page Header
+         * @description Encabezado y descripción de la página de contacto
+         */
+        -->
         <h1>Contáctenos</h1>
         <p>No dude en contactarnos para saber más sobre sus condiciones y métodos de tratamiento.</p><br>
 
+        <!--
+        /**
+         * @component Contact Form
+         * @description Formulario de contacto para consultas sobre salud
+         * @fields
+         *   - name: User's full name (text, required)
+         *   - email: User's email address (email, required)
+         *   - condition: Health condition inquiry (text, required)
+         *   - message: Detailed message (textarea, required)
+         * @actions
+         *   - submit: Triggers thankyou() function and shows confirmation
+         * @validation HTML5 required attributes for all fields
+         */
+        -->
         <form id="contactForm">
+            <!-- Name field - Campo de nombre -->
             <div>
                 <label for="name">Nombre</label>
                 <input type="text" id="name" name="name" required>
             </div>
+            <!-- Email field - Campo de correo electrónico -->
             <div>
                 <label for="email">Correo electrónico</label>
                 <input type="email" id="email" name="email" required>
             </div>
+            <!-- Health condition field - Campo de condición de salud -->
             <div>
                 <label for="condition">Condición</label>
                 <input type="text" id="condition" name="condition" required>
             </div>
+            <!-- Message field - Campo de mensaje -->
             <div>
                 <label for="message">Mensaje</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
             </div>
+            <!-- Submit button - Botón de envío -->
             <button type="submit" onclick="thankyou()">Enviar</button>
         </form>
-        
+
+        <!--
+        /**
+         * @component Contact Form Scripts
+         * @description JavaScript functionality for contact form
+         */
+        -->
         <script>
+            /**
+             * Displays thank you message after form submission
+             * @function thankyou
+             * @description Muestra mensaje de agradecimiento al usuario
+             * @returns {void}
+             *
+             * @example
+             * thankyou(); // Shows "¡Gracias por contactarnos!" alert
+             *
+             * @todo Implement actual form submission to backend
+             * @todo Add form validation beyond HTML5 required attributes
+             * @todo Replace alert with better UX notification
+             */
             function thankyou() {
                 alert(`¡Gracias por contactarnos!`)
             }
